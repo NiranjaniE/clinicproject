@@ -1,0 +1,40 @@
+﻿@model ClinicManagementMVC.Models.Login
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+
+<h3>Fill to login</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label><br />
+                <input type="password" id="pass" name="password"
+                       minlength="3" maxlength="8" required>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@if (TempData["Message"] != null)
+{
+    <p class="alert alert-danger" id="successMessage">@TempData["Message"]</p>
+}
+<div>
+    <a href="~/Home/Index">Back to Home Page</a><br /><br />
+</div>
+

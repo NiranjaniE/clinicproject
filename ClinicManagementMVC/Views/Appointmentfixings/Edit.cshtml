@@ -1,0 +1,66 @@
+﻿@model ClinicManagementMVC.Models.Appointmentfixing
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2> Edit Appointment<a class="btn btn-danger float-right" href="~/Home/Index">LogOut</a></h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="AppointmentId" />
+            <div class="form-group">
+                <label asp-for="PatientID" class="control-label"></label>
+                <input asp-for="PatientID" class="form-control" />
+                <span asp-validation-for="PatientID" class="text-danger"></span>
+            </div>
+            <a href="~/Patientdetails/Index">Refer Patient ID if wanted</a>
+            <div class="form-group">
+                <label asp-for="SpecializationRequired" class="control-label"></label>
+                @Html.DropDownList("SpecializationRequired", new List<SelectListItem>
+               {
+                   new SelectListItem{Value="General",Text="General"},
+                   new SelectListItem{Value="Internal Medicine",Text="Internal Medicine"},
+                   new SelectListItem{Value="Pediatrics",Text="Pediatrics"},
+                   new SelectListItem{Value="Orthopedics",Text="Orthopedics"},
+                   new SelectListItem{Value="Ophthalmology",Text="Ophthalmology"}
+
+                }, "SpecializationRequired", new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label asp-for="DoctorName" class="control-label"> Doctor Name</label>
+                <select asp-for="DoctorName"
+                        class="form-control"
+                        asp-items="@(new SelectList(@ViewBag.DoctorList,"Name","Name"))">
+                </select>
+                <span asp-validation-for="DoctorName" class="text-danger"></span>
+            </div>
+            <a href="~/Doctordetails/Index">Refer Doctor's Specialization if wanted</a>
+            <div class="form-group">
+                <label asp-for="VisitDate" class="control-label"></label>
+                <input asp-for="VisitDate" class="form-control" />
+                <span asp-validation-for="VisitDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VisitTime" class="control-label"></label>
+                <input asp-for="VisitTime" class="form-control" />
+                <span asp-validation-for="VisitTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <table>
+                    <tr>
+                        <input type="submit" value="Edit Details" class="btn btn-success" />
+                    </tr>
+                    <tr>
+                        <a class="btn btn-secondary " href="~/Appointmentfixings/Index">Back to List</a>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

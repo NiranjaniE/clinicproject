@@ -1,0 +1,47 @@
+﻿
+
+<!--@{ ViewData["Title"] = "AddAppointment"; }
+
+<h2>Add Appointment</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddAppointment">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PatientID" class="control-label"></label>
+                <input asp-for="PatientID" class="form-control" />
+                <span asp-validation-for="PatientID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DoctorName" class="control-label"></label>
+                @Html.DropDownList("DoctorName", new SelectList(@ViewBag.items, "DoctorName"), "DoctorName", new { @class = "form-control" })
+                <span asp-validation-for="DoctorName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VisitDate" class="control-label"></label>
+                <input asp-for="VisitDate" class="form-control" />
+                <span asp-validation-for="VisitDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VisitTime" class="control-label"></label>
+                <input asp-for="VisitTime" class="form-control" />
+                <span asp-validation-for="VisitTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Confirm Appointment" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+@if (ViewBag.error != null)
+{
+<span class="badge badge-success">@ViewBag.addapp</span>}
+<div>
+    <a asp-controller="ClinicHome" asp-action="Index">Home</a>
+</div>-->-->-->
+
+@*@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}*@

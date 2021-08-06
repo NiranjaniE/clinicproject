@@ -1,0 +1,68 @@
+﻿@model ClinicManagementMVC.Models.Patientdetails
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1> Edit Patient Details <a class="btn btn-danger float-right" href="~/Home/Index">LogOut</a></h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PatientID" />
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Sex</label><br />
+                @Html.RadioButtonFor(model => model.Sex, "Male")
+                Male<br />
+                @Html.RadioButtonFor(model => model.Sex, "Female")
+                Female<br />
+                @Html.RadioButtonFor(model => model.Sex, "Others")
+                Others<br /><br />
+            </div>
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date_of_Birth" class="control-label"></label>
+                <input asp-for="Date_of_Birth" class="form-control" />
+                <span asp-validation-for="Date_of_Birth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="reason" class="control-label"></label>
+                <input asp-for="reason" class="form-control" />
+                <span asp-validation-for="reason" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <table>
+                    <tr>
+                        <input type="submit" value="Edit Details" class="btn btn-success" />
+                    </tr>
+                    <tr>
+                        <a class="btn btn-secondary " href="~/Patientdetails/Index">Back to List</a>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

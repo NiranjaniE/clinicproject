@@ -1,0 +1,72 @@
+﻿@model ClinicManagementMVC.Models.Patientdetails
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<h2>Add the Patient Details<a class="btn btn-danger float-right" href="~/Home/Index">LogOut</a></h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName"  class="required" ></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="required"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="required">Sex</label><br />
+                @Html.RadioButtonFor(model => model.Sex, "Male")
+                Male<br />
+                @Html.RadioButtonFor(model => model.Sex, "Female")
+                Female<br />
+                @Html.RadioButtonFor(model => model.Sex, "Others")
+                Others<br /><br />
+
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Age" class="required"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date_of_Birth" class="required"></label>
+                <input asp-for="Date_of_Birth" class="form-control" />
+                <span asp-validation-for="Date_of_Birth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="reason" class="control-label"></label>
+                <input asp-for="reason" class="form-control" />
+                <span asp-validation-for="reason" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="required"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <table>
+                    <tr>
+                        <input type="submit" value="Add Details" class="btn btn-success" />
+                    </tr>
+                    <tr>
+                        <a class="btn btn-secondary " href="~/Logins/Success">Back to Menu</a>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+

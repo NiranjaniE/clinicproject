@@ -1,0 +1,57 @@
+﻿@model ClinicManagementMVC.Models.Appointmentfixing
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2> Delete Appointment<a class="btn btn-danger float-right" href="~/Home/Index">LogOut</a></h2><br/>
+<h3>Are you sure you want to delete Appointment?</h3>
+
+<div>
+
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PatientID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SpecializationRequired)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SpecializationRequired)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DoctorName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DoctorName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VisitDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VisitDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VisitTime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VisitTime)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="AppointmentId" />
+        <table>
+            <tr>
+                <input type="submit" value=" Delete" class="btn btn-danger" />
+            </tr>
+            <tr>
+                <a class="btn btn-secondary " href="~/Appointmentfixings/Index">Back to List</a>
+            </tr>
+        </table>
+    </form>
+</div>
