@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s/BuVngovdRi2ytf5q09Y7RGWJAhF7JIfWoBijPBIEYedOLQPuYRlNcgfsRO0MHK28x1foQPb+cWqe5scC7/1w==",
+  "dgSpecHash": "v+w4aDFwTbqREh2sWvcvO+kDdnA6unsM7UoyC5SxomGQymwSEHIBJ5Ia6vaW7HTjbd5K1dB+C+9VW6ApHG8GpQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Niranjani\\Desktop\\training\\project a\\src\\ClinicManagementMVC\\ClinicManagementMVC\\ClinicManagementMVC.csproj",
+  "projectFilePath": "C:\\Users\\Niranjani\\Desktop\\training\\clinicproject\\src\\ClinicManagementMVC\\ClinicManagementMVC\\ClinicManagementMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Niranjani\\.nuget\\packages\\advancedstringbuilder\\0.1.0\\advancedstringbuilder.0.1.0.nupkg.sha512",
     "C:\\Users\\Niranjani\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
